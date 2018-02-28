@@ -1,0 +1,83 @@
+
+\documentclass[11pt, a4paper]{article}
+\usepackage[left=4cm, right=4cm, top=2cm, bottom=3cm]{geometry}
+
+%% \documentclass[paper=a4]{scrartcl}
+%% \usepackage[left=4cm, right=4cm, %showframe
+%% ]{geometry}
+
+\usepackage{local_config}
+
+\usepackage{titling}
+\setlength{\droptitle}{-7em}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\usepackage{authblk}
+
+\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
+%\renewcommand\Abstractfont{\fontsize{11pt}}
+
+\title{Anisotropic connectivity in local cortical circuits\vspace{-2ex}}
+\date{}
+\author[1,2,*]{Felix Z.~Hoffmann}
+\author[3]{Stefan Rotter}
+
+\affil[1]{Frankfurt Institute for Advanced Studies, Johann Wolfgang Goethe University, Frankfurt am Main, Germany}
+\affil[2]{International Max Planck Research School for Neural Circuits, Max Planck Institute for Brain Research, Frankfurt am Main, Germany}
+\affil[3]{AUTHOR AFFILIATION, Freiburg, Germany\vspace{3ex}}
+
+\affil[*]{Email: hoffmann@fias.uni-frankfurt.de\vspace{-16.5ex}}
+\renewcommand\Authands{ and }
+
+
+\begin{document}
+
+\maketitle
+\input{sections/abstract}
+        
+\input{sections/introduction}
+
+\section*{Materials and Methods}
+
+  \input{sections/morphological_anisotropy}
+
+  \input{sections/network_model}
+
+  \input{sections/rewired_networks}
+
+  \input{sections/distance_dependent_networks}
+
+  \input{sections/tuned_networks}
+
+
+% Results and Discussion can be combined.
+\section*{Results}
+
+  \input{sections/standard_network_measures}
+
+  \input{sections/two_neuron_connections}
+
+  \input{sections/three_neuron_motifs}
+
+  \input{sections/neuron_clusters}
+
+  \input{sections/common_neighbor_relations}
+
+
+\input{sections/discussion}
+
+\input{sections/conclusion}
+
+\input{sections/acknowledgments}
+
+
+
+\printbibliography
+  
+  
+\end{document}
+
+

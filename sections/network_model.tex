@@ -1,8 +1,24 @@
 
 
+We consider four types of random network models and analyze their
+connectivity structure. The \textit{anisotropic} and \textit{tuned
+anisotropic} network models implement the anisotropy in the
+. The \textit{rewired} version of those networks serve as a baseline
+. The \textit{distance-dependent} network allows for further
+distinction between effects.
+
 \subsection*{Anisotropic network model}
 
-Here we consider a network model
+The anisotropic network model is the simplest form of an
+implementation of anisotropy in connectivity in a network. The $N$
+nodes of the network are distributed uniformly at random on a square
+of side length $L$. Each node $v$ is randomly assigned an angle
+$\alpha \in [0,2\pi)$. Directed connections are then established from
+$v$ to other nodes with distance less than $\frac{w}{2}$ to the
+projection ray originating from $v$ with angle $\alpha$
+(Fig.~\ref{fig_model}A). The ratio of the width of $w$ to side length
+$L$ is a free parameter of the model . We here choose
+$L=\SI{296}{\micro\meter}$ and $w=$
 
 The model is implemented as an adapted version of a two-dimensional
 directed random geometric graph: additionally to the random position
@@ -13,3 +29,48 @@ projection ray originating from $v$ with angle $a$
 (Fig.~\ref{fig_model} A). This \textit{anisotropic network
   model} is determined by two parameters; network size $N$ and the
 \enquote{axon width} $w$.
+
+
+
+
+\subsection*{Rewired networks}
+%
+In order to understand which structural features are shaped by the
+anisotropy in the network, it is necessary to have a reference network
+that doesn't feature anisotropy, but is otherwise equivalent to the
+anisotropic model. For this we introduced a rewiring algorithm on
+networks that preserves first-order connectivity statistics %??
+as well as the distance-dependent connection probability profile. In
+this process each connection with a spatial distance $x$ between
+source and target, is rewired to a new random target that differs not
+more than $\varepsilon$ from $x$ in spatial distance to the source
+vertex (Fig.~\ref{fig_model} E-F). The resulting network has greatly
+reduced anisotropy in connectivity, resembling that of a
+distance-dependent network (supporting information).
+
+Mention the outcome of the rewiring. Some very edges are lost in the process! %??
+
+By rewiring only a section of all connections, a \textit{partial
+  rewiring} produces a state that retains some anisotropy...
+
+
+
+The relative width of the rewiring parameter was chosen as $\varepsilon / E = 0.05$ (??) to achieve an effective rewiring while closely maintaining the distance-dependent connection probability distribution of the original networks (see SI ??).
+
+
+
+\subsection*{Distance-dependent networks}
+
+To record in how far the rewired model resembles networks implemented
+purely from a distance-dependent. In order to test for this a standard
+distance-dependent was implemented as well.
+
+
+
+
+\subsection*{Tuned networks}
+
+Finally, 
+
+
+\input{figures/figure_2.tex}

@@ -1,24 +1,27 @@
 
 \usepackage{csquotes}
 \usepackage{amsmath}
-\usepackage{amsthm}        % Does theorem stuff
+\usepackage{amsthm}       
 \usepackage{amssymb} 
 
 \usepackage{siunitx}
 
 \usepackage[dvipsnames]{xcolor}
 \usepackage{hyperref}
-\definecolor{darkblue}{rgb}{0.0,0.0,0.3}                      %pdf book marks the way I like%
-\hypersetup{pdftex=true, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, pagecolor=darkblue, urlcolor=darkblue}
-
-
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}                  
+\hypersetup{pdftex=true, colorlinks=true, breaklinks=true,
+            linkcolor=darkblue, menucolor=darkblue,
+            pagecolor=darkblue, urlcolor=darkblue}
 
 \usepackage{graphicx}
 \usepackage[format=hang]{caption}
 
+\usepackage{xr}
+\externaldocument[SI-]{/home/fh/sci/rsc/aniso_netw/pub/arxiv18/si/supporting_information}
+
 %-----------style------------------------%
 
-\addtolength{\parskip}{\baselineskip} %AbsÃ¤tze im Text werden auch tatsÃ¤chlich zu AbsÃ¤tzen%
+\addtolength{\parskip}{\baselineskip}
 \parindent 0pt
 
 \makeatletter

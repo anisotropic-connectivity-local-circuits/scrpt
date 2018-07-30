@@ -6,7 +6,7 @@ anisotropic} network models implement the anisotropy in the
 . The \textit{distance-dependent} network allows for further
 distinction between effects.
 
-\subsection*{Anisotropic network model}
+\subsection*{Anisotropic networks}
 
 The anisotropic network model is the simplest form of a random network
 featuring anisotropy in connectivity. In the model the $N$ nodes of
@@ -26,33 +26,47 @@ anisotropic network model see supplementary material
 
 \input{figures/figure_1-2.tex}
 
-%% The model is implemented as an adapted version of a two-dimensional
-%% directed random geometric graph: additionally to the random position
-%% on the unit square, each node is assigned a uniformly distributed axon
-%% projection angle $a$. For each vertex $v$, directed connections are
-%% then established to nodes with distance $\leq \frac{w}{2}$ to the
-%% projection ray originating from $v$ with angle $a$
-%% (Fig.~\ref{fig_model} A). This \textit{anisotropic network
-%%   model} is determined by two parameters; network size $N$ and the
-%% \enquote{axon width} $w$.
 
 
 \bigskip
 
 \subsection*{Rewired networks}
 %
-In order to understand which structural features are shaped by the
-anisotropy in the network, it is necessary to have a reference network
-that doesn't feature anisotropy, but is otherwise equivalent to the
-anisotropic model. For this we introduced a rewiring algorithm on
-networks that preserves first-order connectivity statistics %??
-as well as the distance-dependent connection probability profile. In
-this process each connection with a spatial distance $x$ between
-source and target, is rewired to a new random target that differs not
-more than $\varepsilon$ from $x$ in spatial distance to the source
-vertex (Fig.~\ref{fig_model} E-F). The resulting network has greatly
-reduced anisotropy in connectivity, resembling that of a
-distance-dependent network (supporting information).
+In order to identify connectivity features in a network that are a
+direct result of its anisotropy in spatial connectivity, we introduce
+rewired versions of anisotropic networks. In the rewiring process,
+existing edges are assigned new targets in such a way that anisotropy
+is eliminated while other important connectivity statistics
+such as distance-dependent connectivity and in- and out-degree
+distributions are preserved.
+
+a modified
+network that lacks anisotropy but is otherwise equivalent to the
+original graph is required. This is achieved for a rewiring algorithm
+
+
+we introduced a rewiring algorithm that eliminates anisotropy but preserves other important 
+
+
+ia network without anisotropy as close as possible to. For this we introduce a rewiring algorithm operating
+on the anisotropic networks.
+
+Thus, to
+discern features that are truly 
+
+it is necessary to have a reference network that doesn't
+feature anisotropy, but is otherwise equivalent to the anisotropic
+model.
+
+For this we introduced a rewiring algorithm on networks that
+preserves first-order connectivity statistics %??  as well as the
+distance-dependent connection probability profile. In this process
+each connection with a spatial distance $x$ between source and target,
+is rewired to a new random target that differs not more than
+$\varepsilon$ from $x$ in spatial distance to the source vertex
+(Fig.~\ref{fig_model} E-F). The resulting network has greatly reduced
+anisotropy in connectivity, resembling that of a distance-dependent
+network (supporting information).
 
 Mention the outcome of the rewiring. Some very edges are lost in the process! %??
 
@@ -65,18 +79,15 @@ The relative width of the rewiring parameter was chosen as $\varepsilon / E = 0.
 
 
 
+\input{figures/figure_2.tex}
+
 \subsection*{Distance-dependent networks}
 
-To record in how far the rewired model resembles networks implemented
-purely from a distance-dependent. In order to test for this a standard
-distance-dependent was implemented as well.
+A further reference network model are distance-dependent networks, in which each possible connection is realized independently with a probability $p(x)$, that depends only on the Euclidean distance $x$ between the source and target node (Fig.~\ref{fig:4_net_models}C). We refer to $p(x)$ as the distance-dependent connectivity profile.
+
+
+\subsection*{Tuned anisotropic networks}
 
 
 
 
-\subsection*{Tuned networks}
-
-Finally, 
-
-
-\input{figures/figure_2.tex}

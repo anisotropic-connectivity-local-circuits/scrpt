@@ -11,14 +11,14 @@ distinction between effects.
 The anisotropic network model is the simplest form of a random network
 featuring anisotropy in connectivity. In the model the $N$ nodes of
 the network are first distributed uniformly at random on a square of
-side length $L$. Each node $v$ is randomly assigned an angle
+side length $E$. Each node $v$ is randomly assigned an angle
 $\alpha \in [0,2\pi)$. Directed connections are then established from
 $v$ to other nodes with distance less than $\frac{w}{2}$ to the
 projection ray originating from $v$ with angle $\alpha$
 (Fig.~\ref{fig:aniso_net}, \ref{fig:4_net_models}A). We chose
-$N=1000$, leaving the ratio $\frac{w}{L}$ as a free parameter of the
+$N=1000$, leaving the ratio $\frac{w}{E}$ as a free parameter of the
 model determining the connection density of the network. We selected
-$L=\SI{296}{\micro\meter}$ and determined $w=\SI{74.6}%
+$E=\SI{296}{\micro\meter}$ and determined $w=\SI{74.6}%
 {\micro\meter}$ to obtain a connection density of $p=11.6$ as in
 \cite{Song2005}. For a formal mathematical definition of the
 anisotropic network model see supplementary material
@@ -33,52 +33,83 @@ anisotropic network model see supplementary material
 
 \subsection*{Rewired networks}
 %
-In order to identify connectivity features in a network that are a
-direct result of its anisotropy in spatial connectivity, we introduce
-rewired versions of anisotropic networks. In the rewiring process,
-existing edges are randomly assigned new targets in a way so that
-anisotropy is eliminated while other important connectivity statistics
-such as distance-dependent connectivity and in- and out-degree
-distributions are preserved.
-% (Fig.~\ref{fig:4_net_models}B)
+In order to identify connectivity features that are a direct result of
+a network's anisotropy in spatial connectivity, we introduce rewired
+versions of anisotropic networks. In the rewiring process existing
+edges are randomly assigned new targets so that anisotropy is
+eliminated while other important connectivity statistics, such as
+distance-dependent connectivity and in- and out-degree distributions,
+are preserved. For example, Fig.~\ref{fig:4_net_models}A shows the
+targets of a node in the original anisotropic network which are to be
+rewired. The same node is then shown in Fig.~\ref{fig:4_net_models}B
+with its new targets in the rewired network.
+%
+% We simply call the modified networks rewired networks (Fig.~\ref{fig:4_net_models}B).
 
+The rewiring algorithm has two parameters -- the rewiring fraction
+$\eta$ of edges to be rewired and the rewiring margin $\varepsilon$ that
+determines how many rewiring targets are on average available. In the
+process any given edge of the graph gets rewired with probability
+$\eta$. If an edge $e$ with source node $s(e)$ and target node $t(e)$
+is to be rewired, at first the Euclidean distance $x$ between $s(e)$
+and $t(e)$ is recorded. Then the pool of potential new targets for $e$
+are all nodes that have a distance to $s(e)$ larger than
+$x-\frac{\varepsilon}{2}$ but smaller than $x+\frac{\varepsilon}{2}$
+(Fig.~\ref{fig:4_net_models}E). From the pool of potential new targets
+are chosen at random until a target is found that does not already
+receive input from $s(e)$, either through a previously rewired edge or
+an edge that will not be rewired. The original edge $e$ is then
+replaced by a new edge $e'$ from $s(e)$ to the new target
+(Fig.~\ref{fig:4_net_models}F). If no such target is available the
+edge is discarded and will not appear in the rewired network.
 
-a modified
-network that lacks anisotropy but is otherwise equivalent to the
-original graph is required. This is achieved for a rewiring algorithm
+We chose a rewiring margin $\varepsilon / E = 0.05$ to provide a large
+enough average number of rewiring targets while closely maintaining
+the distance-depedent connecitivty in the network (see
+Section~\ref{SI-sec:rewiring_margin}). A rewired network, if not
+otherwise specified, refers to a fully rewired version ($\eta=1$) of
+the current network.
 
-
-we introduced a rewiring algorithm that eliminates anisotropy but preserves other important 
-
-
-ia network without anisotropy as close as possible to. For this we introduce a rewiring algorithm operating
-on the anisotropic networks.
-
-Thus, to
-discern features that are truly 
-
-it is necessary to have a reference network that doesn't
-feature anisotropy, but is otherwise equivalent to the anisotropic
-model.
-
-For this we introduced a rewiring algorithm on networks that
-preserves first-order connectivity statistics %??  as well as the
-distance-dependent connection probability profile. In this process
-each connection with a spatial distance $x$ between source and target,
-is rewired to a new random target that differs not more than
-$\varepsilon$ from $x$ in spatial distance to the source vertex
-(Fig.~\ref{fig_model} E-F). The resulting network has greatly reduced
-anisotropy in connectivity, resembling that of a distance-dependent
-network (supporting information).
-
-Mention the outcome of the rewiring. Some very edges are lost in the process! %??
-
-By rewiring only a section of all connections, a \textit{partial
-  rewiring} produces a state that retains some anisotropy...
+% to achieve an effective rewiring while closely maintaining the distance-dependent connection probability distribution of the original networks (see SI ??).
 
 
 
-The relative width of the rewiring parameter was chosen as $\varepsilon / E = 0.05$ (??) to achieve an effective rewiring while closely maintaining the distance-dependent connection probability distribution of the original networks (see SI ??).
+% a modified
+% network that lacks anisotropy but is otherwise equivalent to the
+% original graph is required. This is achieved for a rewiring algorithm
+
+
+% we introduced a rewiring algorithm that eliminates anisotropy but preserves other important 
+
+
+% ia network without anisotropy as close as possible to. For this we introduce a rewiring algorithm operating
+% on the anisotropic networks.
+
+% Thus, to
+% discern features that are truly 
+
+% it is necessary to have a reference network that doesn't
+% feature anisotropy, but is otherwise equivalent to the anisotropic
+% model.
+
+% For this we introduced a rewiring algorithm on networks that
+% preserves first-order connectivity statistics %??  as well as the
+% distance-dependent connection probability profile. In this process
+% each connection with a spatial distance $x$ between source and target,
+% is rewired to a new random target that differs not more than
+% $\varepsilon$ from $x$ in spatial distance to the source vertex
+% (Fig.~\ref{fig_model} E-F). The resulting network has greatly reduced
+% anisotropy in connectivity, resembling that of a distance-dependent
+% network (supporting information).
+
+% Mention the outcome of the rewiring. Some very edges are lost in the process! %??
+
+% By rewiring only a section of all connections, a \textit{partial
+%   rewiring} produces a state that retains some anisotropy...
+
+
+
+% The relative width of the rewiring parameter was chosen as $\varepsilon / E = 0.05$ (??) to achieve an effective rewiring while closely maintaining the distance-dependent connection probability distribution of the original networks (see SI ??).
 
 
 

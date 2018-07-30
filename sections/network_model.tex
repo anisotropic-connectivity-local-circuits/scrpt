@@ -8,34 +8,36 @@ distinction between effects.
 
 \subsection*{Anisotropic network model}
 
-The anisotropic network model is the simplest form of an
-implementation of anisotropy in connectivity in a network. The $N$
-nodes of the network are distributed uniformly at random on a square
-of side length $L$. Each node $v$ is randomly assigned an angle
-$\alpha \in [0,2\pi)$. Directed connections are then established from
-$v$ to other nodes with distance less than $\frac{w}{2}$ to the
-projection ray originating from $v$ with angle $\alpha$
-(Fig.~\ref{fig_model}A). The ratio of the width of $w$ to side length
-$L$ is a free parameter of the model . We here choose
-$L=\SI{296}{\micro\meter}$ and $w=\SI{74.6}{\micro\meter}$ in order
-to . For a formal mathematical definition see supplementary material
+The anisotropic network model is the simplest form of a random network
+featuring anisotropy in connectivity. In the model the $N$ nodes of
+the network are first distributed uniformly at random on a square of
+side length $L$. Each node $v$ is randomly assigned an angle $\alpha
+\in [0,2\pi)$. Directed connections are then established from $v$ to
+other nodes with distance less than $\frac{w}{2}$ to the projection
+ray originating from $v$ with angle $\alpha$ (Fig.~\ref{fig:aniso_net}).
+We chose $N=1000$, leaving the ratio $\frac{w}{L}$ as a free parameter
+of the model determining the connection density of the network. We
+selected $L=\SI{296}{\micro\meter}$ and determined $w=\SI{74.6}%
+{\micro\meter}$ to obtain a connection density of $p=11.6$ as in
+\cite{Song2005}. For a formal mathematical definition of the
+anisotropic network model see supplementary material
 (\ref{SI-sec:aniso_model}).
 
 
 \input{figures/figure_1-2.tex}
 
-The model is implemented as an adapted version of a two-dimensional
-directed random geometric graph: additionally to the random position
-on the unit square, each node is assigned a uniformly distributed axon
-projection angle $a$. For each vertex $v$, directed connections are
-then established to nodes with distance $\leq \frac{w}{2}$ to the
-projection ray originating from $v$ with angle $a$
-(Fig.~\ref{fig_model} A). This \textit{anisotropic network
-  model} is determined by two parameters; network size $N$ and the
-\enquote{axon width} $w$.
+%% The model is implemented as an adapted version of a two-dimensional
+%% directed random geometric graph: additionally to the random position
+%% on the unit square, each node is assigned a uniformly distributed axon
+%% projection angle $a$. For each vertex $v$, directed connections are
+%% then established to nodes with distance $\leq \frac{w}{2}$ to the
+%% projection ray originating from $v$ with angle $a$
+%% (Fig.~\ref{fig_model} A). This \textit{anisotropic network
+%%   model} is determined by two parameters; network size $N$ and the
+%% \enquote{axon width} $w$.
 
 
-
+\bigskip
 
 \subsection*{Rewired networks}
 %

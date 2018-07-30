@@ -11,13 +11,14 @@ distinction between effects.
 The anisotropic network model is the simplest form of a random network
 featuring anisotropy in connectivity. In the model the $N$ nodes of
 the network are first distributed uniformly at random on a square of
-side length $L$. Each node $v$ is randomly assigned an angle $\alpha
-\in [0,2\pi)$. Directed connections are then established from $v$ to
-other nodes with distance less than $\frac{w}{2}$ to the projection
-ray originating from $v$ with angle $\alpha$ (Fig.~\ref{fig:aniso_net}).
-We chose $N=1000$, leaving the ratio $\frac{w}{L}$ as a free parameter
-of the model determining the connection density of the network. We
-selected $L=\SI{296}{\micro\meter}$ and determined $w=\SI{74.6}%
+side length $L$. Each node $v$ is randomly assigned an angle
+$\alpha \in [0,2\pi)$. Directed connections are then established from
+$v$ to other nodes with distance less than $\frac{w}{2}$ to the
+projection ray originating from $v$ with angle $\alpha$
+(Fig.~\ref{fig:aniso_net}, \ref{fig:4_net_models}A). We chose
+$N=1000$, leaving the ratio $\frac{w}{L}$ as a free parameter of the
+model determining the connection density of the network. We selected
+$L=\SI{296}{\micro\meter}$ and determined $w=\SI{74.6}%
 {\micro\meter}$ to obtain a connection density of $p=11.6$ as in
 \cite{Song2005}. For a formal mathematical definition of the
 anisotropic network model see supplementary material
@@ -35,10 +36,12 @@ anisotropic network model see supplementary material
 In order to identify connectivity features in a network that are a
 direct result of its anisotropy in spatial connectivity, we introduce
 rewired versions of anisotropic networks. In the rewiring process,
-existing edges are assigned new targets in such a way that anisotropy
-is eliminated while other important connectivity statistics
+existing edges are randomly assigned new targets in a way so that
+anisotropy is eliminated while other important connectivity statistics
 such as distance-dependent connectivity and in- and out-degree
 distributions are preserved.
+% (Fig.~\ref{fig:4_net_models}B)
+
 
 a modified
 network that lacks anisotropy but is otherwise equivalent to the

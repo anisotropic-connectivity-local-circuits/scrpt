@@ -1,10 +1,13 @@
 
 We consider four types of random network models and analyze their
-connectivity structure. The \textit{anisotropic} and \textit{tuned
-anisotropic} network models implement the anisotropy in the
-. The \textit{rewired} version of those networks serve as a baseline
-. The \textit{distance-dependent} network allows for further
-distinction between effects.
+connectivity structure. The anisotropic and tuned anisotropic networks
+are simple models that implement anisotropy in connectivity motivated
+from steoreotypical pyramidal cell morphology. The rewired versions of
+those networks lack anisotropy but can be seen as otherwise equivalent
+in their connectivity and provide an important reference for this
+study. The distance-dependent networks allow for further distinction
+between effects on network connectivity that are either a direct or
+undirect consequence of anisotropy.
 
 \subsection*{Anisotropic networks}
 
@@ -15,9 +18,9 @@ side length $E$. Each node $v$ is randomly assigned an angle
 $\alpha \in [0,2\pi)$. Directed connections are then established from
 $v$ to other nodes with distance less than $\frac{w}{2}$ to the
 projection ray originating from $v$ with angle $\alpha$
-(Fig.~\ref{fig:aniso_net}, \ref{fig:4_net_models}A). We chose
-$N=1000$, leaving the ratio $\frac{w}{E}$ as a free parameter of the
-model determining the connection density of the network. We selected
+(Fig.~\ref{fig:aniso_net}). We chose $N=1000$, leaving the ratio
+$\frac{w}{E}$ as a free parameter of the model determining the
+connection density of the network. We selected
 $E=\SI{296}{\micro\meter}$ and determined $w=\SI{74.6}%
 {\micro\meter}$ to obtain a connection density of $p=11.6$ as in
 \cite{Song2005}. For a formal mathematical definition of the
@@ -47,19 +50,19 @@ with its new targets in the rewired network.
 % We simply call the modified networks rewired networks (Fig.~\ref{fig:4_net_models}B).
 
 The rewiring algorithm has two parameters -- the rewiring fraction
-$\eta$ of edges to be rewired and the rewiring margin $\varepsilon$ that
-determines how many rewiring targets are on average available. In the
-process any given edge of the graph gets rewired with probability
+$\eta$ of edges to be rewired and the rewiring margin $\varepsilon$
+that determines how many rewiring targets are on average available. In
+the process any given edge of the graph gets rewired with probability
 $\eta$. If an edge $e$ with source node $s(e)$ and target node $t(e)$
 is to be rewired, at first the Euclidean distance $x$ between $s(e)$
-and $t(e)$ is recorded. Then the pool of potential new targets for $e$
-are all nodes that have a distance to $s(e)$ larger than
+and $t(e)$ is recorded. Potential new targets for $e$ are then all
+nodes that have a distance to $s(e)$ larger than
 $x-\frac{\varepsilon}{2}$ but smaller than $x+\frac{\varepsilon}{2}$
 (Fig.~\ref{fig:4_net_models}E). From the pool of potential new targets
 are chosen at random until a target is found that does not already
-receive input from $s(e)$, either through a previously rewired edge or
-an edge that will not be rewired. The original edge $e$ is then
-replaced by a new edge $e'$ from $s(e)$ to the new target
+receive input from $s(e)$ either through a previously rewired edge or
+an edge that will not be rewired if $\eta <1$. The original edge $e$
+is then replaced by a new edge $e'$ from $s(e)$ to the new target
 (Fig.~\ref{fig:4_net_models}F). If no such target is available the
 edge is discarded and will not appear in the rewired network.
 

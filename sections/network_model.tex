@@ -1,13 +1,14 @@
 
 We consider four types of random network models and analyze their
 connectivity structure. The anisotropic and tuned anisotropic networks
-are simple models that implement anisotropy in connectivity motivated
-from steoreotypical pyramidal cell morphology. The rewired versions of
-those networks lack anisotropy but can be seen as otherwise equivalent
-in their connectivity and provide an important reference for this
-study. The distance-dependent networks allow for further distinction
-between effects on network connectivity that are either a direct or
-undirect consequence of anisotropy.
+are simple models that implement anisotropy in spatial connectivity
+motivated from steoreotypical pyramidal cell morphology. The rewired
+versions of those networks lack anisotropy but can be seen as
+otherwise equivalent in their connectivity and provide an important
+reference for this study. The distance-dependent networks allow for
+further distinction between effects on the network connectivity
+structure that are either a direct or undirect consequence of
+anisotropy.
 
 \subsection*{Anisotropic networks}
 
@@ -73,61 +74,41 @@ Section~\ref{SI-sec:rewiring_margin}). A rewired network, if not
 otherwise specified, refers to a fully rewired version ($\eta=1$) of
 the current network. 
 
-% to achieve an effective rewiring while closely maintaining the distance-dependent connection probability distribution of the original networks (see SI ??).
-
-
-
-% a modified
-% network that lacks anisotropy but is otherwise equivalent to the
-% original graph is required. This is achieved for a rewiring algorithm
-
-
-% we introduced a rewiring algorithm that eliminates anisotropy but preserves other important 
-
-
-% ia network without anisotropy as close as possible to. For this we introduce a rewiring algorithm operating
-% on the anisotropic networks.
-
-% Thus, to
-% discern features that are truly 
-
-% it is necessary to have a reference network that doesn't
-% feature anisotropy, but is otherwise equivalent to the anisotropic
-% model.
-
-% For this we introduced a rewiring algorithm on networks that
-% preserves first-order connectivity statistics %??  as well as the
-% distance-dependent connection probability profile. In this process
-% each connection with a spatial distance $x$ between source and target,
-% is rewired to a new random target that differs not more than
-% $\varepsilon$ from $x$ in spatial distance to the source vertex
-% (Fig.~\ref{fig_model} E-F). The resulting network has greatly reduced
-% anisotropy in connectivity, resembling that of a distance-dependent
-% network (supporting information).
-
-% Mention the outcome of the rewiring. Some very edges are lost in the process! %??
-
-% By rewiring only a section of all connections, a \textit{partial
-%   rewiring} produces a state that retains some anisotropy...
-
-
-
-% The relative width of the rewiring parameter was chosen as $\varepsilon / E = 0.05$ (??) to achieve an effective rewiring while closely maintaining the distance-dependent connection probability distribution of the original networks (see SI ??).
-
-
 
 \input{figures/figure_2.tex}
 
+
+
 \subsection*{Distance-dependent networks}
 
-A further reference network model are distance-dependent networks, in which each possible connection is realized independently with a probability $p(x)$, that depends only on the Euclidean distance $x$ between the source and target node (Fig.~\ref{fig:4_net_models}C). We refer to $p(x)$ as the distance-dependent connectivity profile.
+A further reference network model are distance-dependent
+networks. Here, each possible connection is realized independently
+with a probability $p(x)$, that depends only on the Euclidean distance
+$x$ between the source and target node
+(Fig.~\ref{fig:4_net_models}C). We refer to $p(x)$ as the
+distance-dependent connectivity profile. 
+
 
 
 \subsection*{Tuned anisotropic networks}
 
-The distance-depedent connection probability in anisotropic networks is unnatural (Fig.~\ref{fig:4_net_models}G). We introduce a variation of the anisotropic networks where the width $w$ is not fixed, but depends on the distance $x$ from the node, resulting in a distance dependent width $w(x)$.
+Distance-depedent connectivity in anisotropic networks is highly
+specific (Fig.~\ref{fig:4_net_models}G) and likely not a realistic
+model for biological systems. To obtain distances profiles more
+closely resembling neural circuit connectivity, we introduce a
+variation of the anisotropic networks where the width $w$ is not
+fixed, but depends on the distance $x$ from the source node
+(Fig.~\ref{fig:4_net_models}D). The width of the \enquote{axon
+  corridor} thus becomes a distance-dependent function $w(x)$. Tuning
+$w(x)$ we obtained a distance-dependent connection probability as
+found by \textcite{Perin2011} (Fig.~\ref{fig:4_net_models}H, see
+Section~\ref{SI-sec:tuned_networks} for details). Here, the surface
+side length $E=\SI{296}{\micro\meter}$ was picked such that the
+connection density matched $p=0.116$ as in \cite{Song2005} and the
+other network types.
 
-This can be used to obtain. We fitted $w(x)$ to obtain the distance profile of . The surface side length of $E=\SI{296}{\micro\meter}$ was chosen such that the connection density matches $p=0.116$.
+
+
 
 
 

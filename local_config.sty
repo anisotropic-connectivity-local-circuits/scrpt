@@ -16,8 +16,17 @@
 \usepackage{graphicx}
 \usepackage[format=hang]{caption}
 
+\usepackage[compact]{titlesec}
+\titleformat{\subsection}
+{\normalfont\fontsize{11}{13}\bfseries}{\thesection}{1em}{}
+\titlespacing*{\subsection}
+{0pt}{2.5ex plus 0.5ex minus .2ex}{-0.5ex plus .2ex}
+
+
 \usepackage{xr}
 \externaldocument[SI-]{/home/fh/sci/rsc/aniso_netw/pub/arxiv18/si/supporting_information}
+
+\newcommand\figref{Fig.~\ref}
 
 %-----------style------------------------%
 

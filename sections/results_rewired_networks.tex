@@ -17,13 +17,13 @@ distribution in random networks of the same connection probability
 (\figref{fig:io_deg}A-B). Out-degree distributions on the other hand
 were very broad in anisotropic and rewired networks while
 distance-dependent networks maintained a distribution similar to the
-in-degree (\figref{fig:io_deg}C-D). These stretched out distributions
-in anisotropic networks are a result of some axons being \enquote{cut
+in-degree (\figref{fig:io_deg}C-D). The stretched out distributions in
+anisotropic networks are a result of some axons being \enquote{cut
   off} at a short length, while other axons travel across the network
 surface in full length and make numerous connections along the
 way. The observed difference between in-degree and out-degree
-distributions in anisotropic networks could be expected in the
-connectome of slice experiments as well. For this study, we maintain
+distributions in anisotropic networks could be expected in connectomes
+inferred from slice experiments as well. For this study, we maintain
 both the distance-dependent and rewired networks as reference models
 such that features that appear in anisotropic networks but not in
 rewired and distance-dependent networks can be truthfully attributed
@@ -34,7 +34,29 @@ to anisotropy in connectivity.
         
 \subsection{Rewired networks}
 
-We verified that the rewiring algorithm indeed works as expected. For
+Next we to verified that the rewiring algorithm indeed eliminates
+anisotropy in the network. For this we measured the degree of
+anisotropy in the targets of a neuron $v$ by summing the normalized
+vectors pointing from $v$ to its connected target neurons. The
+resulting vector's norm, divided by the number of targets of $v$, is
+then a normalized measure $\lambda(v)$ for the anisotropy in spatial
+connectivity of $v$ -- if target neurons are spread isotropically
+around the neuron $\lambda(v)$ is close to $0$, if almost all targets
+lie in the same direction from $v$ the value of $\lambda(v)$ is close
+ton $1$ (for a formal definition of $\lambda$ see supplementary
+material \ref{SI-sec:aniso_measure}).
+
+
+Anisotropic and tuned anisotropic networks have distribution of
+$\lambda$ with a peak near $1$ (\figref{fig:io_deg}E-F). After
+rewiring this peak completely vanishes and
+
+In summary, rewired networks have an approximately equal
+distance-dependent connectivity (\figref{fig:4_net_models}G), matching
+and the . With this
+
+
+We verified that the rewiring alg For
 this Indeed, taking the vector (see Methods) that rewiring more and
 more of the graph shifts the. Distance-dependent connection
 probabilities (\figref{fig:4_net_models}G) and degree distributions

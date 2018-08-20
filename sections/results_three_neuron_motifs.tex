@@ -29,11 +29,11 @@ often than expected. Other experimental studies \cite{Perin2011,
 three neuron patterns in cortical circuits.
 
 Here we analyzed the counts of triplet motifs in anisotropic networks
-and compared it with the expected counts predicted from the pair
-statistics extracted before. We found a highly specific distribution
-of over- and underrepresentation of three neuron motifs in anisotropic
-networks (\figref{fig:3_motifs}A) and tuned anisotropic networks
-(\figref{fig:3_motifs}B) resembling the experimental results of
+and compared it with the expected counts predicted from pair
+statistics. We found a highly specific distribution of over- and
+underrepresentation of three neuron motifs in anisotropic
+(\figref{fig:3_motifs}A) and tuned anisotropic networks
+(\figref{fig:3_motifs}B), resembling the experimental results of
 \textcite{Song2005}.%
 %
 \input{figures/figure_4.tex}%
@@ -41,22 +41,39 @@ networks (\figref{fig:3_motifs}A) and tuned anisotropic networks
 Notably, deviation from the expected counts was in general much lower
 in rewired and distance-dependent versions of the networks. Indeed,
 networks with anisotropy in spatial connectivity have significantly
-over- and underrepresented. The biggest 10, 12, 14 and
-15. (\figref{fig:3_motifs}, \figref{SI-fig:3motif_rel}).
+over- and underrepresented motifs compared to rewired networks. We
+found the strongest overrepresentation in anisotropic and tuned
+networks relative to rewired networks in motifs 10, 12, 14 an 15
+(\figref{fig:3_motifs}, \figref{SI-fig:3motif_rel}). This is in good
+match with the data of \textcite{Perin2011} who reported motifs 4, 10,
+12 and 14 to be overrepresented (motif labels marked with *).
+
+Interestingly motif 4, while generally overrepresented in anisotropic
+networks, is occurring even more frequently . We wondered whether this
+could be a temporary effect of the rewiring algorithm that would
+vanish with repeated rewiring. No such effect was found, distributions
+remained stable after 5 and 10 repeated runs of the rewiring algorithm
+on the network (\figref{SI-fig:3motif_rr5r10}). Taken together the
+data show that anisotropy in spatial connectivity strongly affects the
+relative occurrence of three neuron connection patterns. Motifs that
+are reported to be overrepresented in cortical circuits occur with
+higher than expected frequency in circuits in anisotropy. This effect
+is significantly lessened once anisotropy is eliminated.
 
 
-Perin et al.~reported an overrepresentation of motifs 4, 10, 12 and 14
-in connections between layer 5 pyramidal cell in rat somatosensory
-cortex. We found that these motifs are strongly overrepresented in
-both anisotropic and tuned anisotropic networks (motif labels marked
-with *). Notably, deviation from the expected counts is in general
-much lower in the rewired and distance-dependent versions of the
-networks. Specifically, strong overrepresentation .
 
-Taken together the data show that anisotropy in spatial connectivity
-strongly affects the relative occurrence of three neuron connection
-patterns and induces an overrepresentation in motifs that were
-reported as appearing above expectation in cortical circuits.
+
+% Perin et al.~reported an overrepresentation of motifs 4, 10, 12 and 14
+% in connections between layer 5 pyramidal cell in rat somatosensory
+% cortex. We found that these motifs are strongly overrepresented in
+% both anisotropic and tuned anisotropic networks (motif labels marked
+% with *). Notably, deviation from the expected counts is in general
+% much lower in the rewired and distance-dependent versions of the
+% networks. Specifically, strong overrepresentation .
+
+
+
+% and induces an overrepresentation in 
 
 % These data match well . Here, over- and underrepresentation of certain
 % motifs is a direct result of anisotropy in spatial connectivity as
@@ -75,7 +92,6 @@ reported as appearing above expectation in cortical circuits.
 % indicates a spatial closeness, that can be transferred to third pair
 % as well - thus one should find a higher connection chance. We find
 % that in comparable distance-dependent networks, only
-
 
 
 %

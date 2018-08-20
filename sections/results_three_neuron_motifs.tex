@@ -7,29 +7,36 @@ Multiple paired whole-cell recordings in slices of rat visual and
 somatosensory cortex revealed nonrandom structures in layer 5
 pyramidal cells beyond pair connections -- the connection motifs
 occurring in groups of three neurons deviate significantly of what one
-would predict from the occurrence neuron pair
-connections~\cite{Song2005, Perin2011}. Song et al.~for example found
-the probability for a neuron pair $(u,v)$ to have a connection
+would predict from the statistics of connections in neuron
+pairs~\cite{Song2005, Perin2011}. Song et al.~for example found the
+probability for a neuron pair $(u,v)$ to have a connection
 $u \rightarrow v$ to be $p_{u \rightarrow v}= 0.0615$ and the
 probability for a bidirectional connection was
-$p_{u \leftrightarrow v} = 0.0542$. The probability for a group of
-three randomly selected neurons to show the connection motif 14 as
-labelled in \figref{fig:3_motifs}A, can then be computed from the pair
-probabilities as
-\[
+$p_{u \leftrightarrow v} = 0.0542$. Form this they computed the
+probability for a group of three randomly selected neurons to show,
+for example, the connection motif 14 as labelled in
+\figref{fig:3_motifs}A as
+\begin{align*}
   \textbf{P}(\text{motif 14})= 3 \,p_{u \rightarrow v}^2
-                                 \, p_{u \leftrightarrow v},
-\]
-as the pattern is composed of two unidirectionally and one
-bidirectionally connected pair and there are 3 possible ways to
-arrange the pairs to obtain the motif (for details and combinatorics of
-all patterns see supplementary material
-\ref{SI-sec:3motif_stat}). Here we also analyzed the counts of triplet
-motifs in the anisotropic networks and compared it with the expected
-counts predicted from the pair statistics extracted before. We found a
-highly specific distribution of three neuron motifs in anisotropic
-networks (\figref{fig:3_motifs}A) and tuned anisotropic networks
-(\figref{fig:3_motifs}B).%
+                                 \, p_{u \leftrightarrow v}, \label{eq:m14}
+\end{align*}
+where the factor of 3 is the number of possible ways to arrange the
+pair connections to obtain the motif (for details and combinatorics of
+all patterns see supplementary material \ref{SI-sec:3motif_stat}). The
+actual occurrence of motifs in their data, however, differed
+significantly from this computed expectation. For example, Song et
+al.~found that motif 14 occurred approximately 3 ($\pm 2$) times more
+often than expected. Other experimental studies \cite{Perin2011,
+  Rieubland2014} and recent computational studies
+\cite{Miner2016,Gal2017} have corroborated the specific occurrence of
+three neuron patterns in cortical circuits.
+
+Here we analyzed the counts of triplet motifs in the anisotropic
+networks and compared it with the expected counts predicted from the
+pair statistics extracted before. We found a highly specific
+distribution of over- and underrepresentation of three neuron motifs
+in anisotropic networks (\figref{fig:3_motifs}A) and tuned anisotropic
+networks (\figref{fig:3_motifs}B).%
 %
 \input{figures/figure_4.tex}
 %
